@@ -1,7 +1,7 @@
 {
-  "name": "tpl-ts-sdk",
+  "name": "@0x-jerry/v2sp",
   "version": "0.0.0",
-  "description": "",
+  "description": "## TODO",
   "type": "module",
   "engines": {
     "node": ">= 18"
