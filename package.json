@@ -1,6 +1,6 @@
 {
   "name": "@0x-jerry/x2sp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Xray sharing protocal",
   "type": "module",
   "engines": {
