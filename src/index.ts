@@ -1,5 +1,4 @@
 import { isString } from '@0x-jerry/utils'
-import { URL } from 'node:url'
 
 export interface X2SPOption {
   protocol: 'vmess' | 'vless'
