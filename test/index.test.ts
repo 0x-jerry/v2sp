@@ -1,11 +1,11 @@
-import { decode, encode, type V2SPOption } from '../src'
+import { decode, encode, type X2SPOption } from '../src'
 
 interface TestPair {
-  config: V2SPOption
+  config: X2SPOption
   sharedStr: string
 }
 
-describe('v2sp', () => {
+describe('x2sp', () => {
   const tests: TestPair[] = [
     {
       config: {

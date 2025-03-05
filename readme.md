@@ -1,15 +1,17 @@
-# V2SP
+# X2SP(Xray Sharing Protocol)
+
+https://github.com/XTLS/Xray-core/discussions/716
 
 # Install
 
 ```sh
-pnpm i @0x-jerry/v2sp
+pnpm i @0x-jerry/x2sp
 ```
 
 # Usage
 
 ```ts
-import { encode, decode } from '@0x-jerry/v2sp'
+import { encode, decode } from '@0x-jerry/x2sp'
 
 const config = {
   protocol: 'vmess',

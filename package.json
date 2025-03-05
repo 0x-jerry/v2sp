@@ -1,7 +1,7 @@
 {
-  "name": "@0x-jerry/v2sp",
+  "name": "@0x-jerry/x2sp",
   "version": "0.0.0",
-  "description": "## TODO",
+  "description": "Xray sharing protocal",
   "type": "module",
   "engines": {
     "node": ">= 18"

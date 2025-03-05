@@ -1,7 +1,7 @@
 import { isString } from '@0x-jerry/utils'
 import { URL } from 'node:url'
 
-export interface V2SPOption {
+export interface X2SPOption {
   protocol: 'vmess' | 'vless'
   uuid: string
   host: string
@@ -38,7 +38,7 @@ export interface V2SPOption {
  * @param opt Only support a part of xray options
  * @returns
  */
-export function encode(opt: V2SPOption): string {
+export function encode(opt: X2SPOption): string {
   const { protocol, host, port, name, uuid, transport = {} } = opt
 
   const url = new URL(`${protocol}://${host}:${port}`)
@@ -54,7 +54,7 @@ export function encode(opt: V2SPOption): string {
   return url.toString()
 }
 
-export function decode(sharedString: string): V2SPOption {
+export function decode(sharedString: string): X2SPOption {
   const url = new URL(sharedString)
 
   const $ = (key: string) => {
@@ -66,15 +66,15 @@ export function decode(sharedString: string): V2SPOption {
     return decodeURIComponent(val)
   }
 
-  const config: V2SPOption = {
+  const config: X2SPOption = {
     name: url.hash.slice(1),
-    protocol: url.protocol.slice(0, -1) as V2SPOption['protocol'],
+    protocol: url.protocol.slice(0, -1) as X2SPOption['protocol'],
     host: url.hostname,
     port: Number.parseInt(url.port),
     uuid: url.username,
   }
 
-  const keys: Array<keyof NonNullable<V2SPOption['transport']>> = [
+  const keys: Array<keyof NonNullable<X2SPOption['transport']>> = [
     'type',
     'host',
     'path',
